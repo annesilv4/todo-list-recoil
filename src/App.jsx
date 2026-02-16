@@ -1,8 +1,8 @@
 import './global.css'
 import './App.css'
-import { TaskList } from './components/taskList';
-import { TaskForm } from './components/taskForm';
-import { FilterTasks } from './components/filter';
+import { TaskList } from './components/taskList/taskList';
+import { TaskForm } from './components/taskForm/taskForm';
+import { FilterTasks } from './components/filter/filter';
 
 function App() {
 
@@ -13,15 +13,15 @@ function App() {
           <h1>Todo-List Recoil</h1>
           <p className="app-subtitle">Gerencie suas tarefas com eficiência</p>
         </header>
-        
+
         <section className="form-section">
           <TaskForm />
         </section>
-        
+
         <section className="filter-section">
           <FilterTasks />
         </section>
-        
+
         <section className="list-section">
           <TaskList />
         </section>

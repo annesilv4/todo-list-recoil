@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { tasksState } from "../atoms/task";
+import { tasksState } from "../../atoms/task";
 import "./taskItem.css";
 
 export function TaskItem({ task }) {

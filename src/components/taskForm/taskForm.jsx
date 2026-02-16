@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
-import { tasksState } from "../atoms/task";
+import { tasksState } from "../../atoms/task";
 import "./taskForm.css";
 
 export function TaskForm() {

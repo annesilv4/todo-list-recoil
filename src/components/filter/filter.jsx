@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { filterTask } from "../atoms/filterTask";
+import { filterTask } from "../../atoms/filterTask";
 import "./filter.css";
 
 export function FilterTasks() {
@@ -7,19 +7,19 @@ export function FilterTasks() {
 
     return (
         <div className="filter-container">
-            <button 
+            <button
                 className={`filter-button ${filter === "all" ? "active" : ""}`}
                 onClick={() => setFilter("all")}
             >
                 Todas
             </button>
-            <button 
+            <button
                 className={`filter-button ${filter === "completed" ? "active" : ""}`}
                 onClick={() => setFilter("completed")}
             >
                 Concluída
             </button>
-            <button 
+            <button
                 className={`filter-button ${filter === "uncompleted" ? "active" : ""}`}
                 onClick={() => setFilter("uncompleted")}
             >
