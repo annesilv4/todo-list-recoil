@@ -6,12 +6,12 @@ import { FilterTasks } from './components/filter';
 function App() {
 
   return (
-    <div>
+    <>
       <h1>Todo-List Recoil</h1>
       <TaskForm />
       <FilterTasks />
       <TaskList />
-    </div>
+    </>
   )
 }
 
