@@ -1,4 +1,5 @@
 import './global.css'
+import './App.css'
 import { TaskList } from './components/taskList';
 import { TaskForm } from './components/taskForm';
 import { FilterTasks } from './components/filter';
@@ -6,12 +7,26 @@ import { FilterTasks } from './components/filter';
 function App() {
 
   return (
-    <>
-      <h1>Todo-List Recoil</h1>
-      <TaskForm />
-      <FilterTasks />
-      <TaskList />
-    </>
+    <div className="app-container">
+      <main className="app-main">
+        <header className="app-header">
+          <h1>Todo-List Recoil</h1>
+          <p className="app-subtitle">Gerencie suas tarefas com eficiência</p>
+        </header>
+        
+        <section className="form-section">
+          <TaskForm />
+        </section>
+        
+        <section className="filter-section">
+          <FilterTasks />
+        </section>
+        
+        <section className="list-section">
+          <TaskList />
+        </section>
+      </main>
+    </div>
   )
 }
 
