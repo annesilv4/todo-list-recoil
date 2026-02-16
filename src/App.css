@@ -4,12 +4,12 @@
   align-items: flex-start;
   min-height: 100vh;
   padding: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #66a4ea 0%, #f2f1f3 100%);
 }
 
 .app-main {
   width: 100%;
-  max-width: 600px;
+  max-width: 915px;
   background: var(--surface);
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
