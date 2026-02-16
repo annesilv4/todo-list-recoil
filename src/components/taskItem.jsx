@@ -1,5 +1,6 @@
 import { useRecoilState } from "recoil";
 import { tasksState } from "../atoms/task";
+import "./taskItem.css";
 
 export function TaskItem({ task }) {
     const [tasks, setTasks] = useRecoilState(tasksState);
@@ -18,12 +19,26 @@ export function TaskItem({ task }) {
     };
 
     return (
-        <li>
-            <span style={{ textDecoration: task.completed ? "line-through" : "none" }}>
+        <li className="task-item">
+            <span className={`task-description ${task.completed ? "completed" : ""}`}>
                 {task.description}
             </span>
-            <button onClick={toggleTask}>Concluir</button>
-            <button onClick={removeTask}>Remover</button>
+            <div className="task-actions">
+                <button
+                    className="task-button task-button-complete"
+                    onClick={toggleTask}
+                    title={task.completed ? "Desmarcar como concluído" : "Marcar como concluído"}
+                >
+                    {task.completed ? "Desmarcar" : "Concluir"}
+                </button>
+                <button
+                    className="task-button task-button-remove"
+                    onClick={removeTask}
+                    title="Remover tarefa"
+                >
+                    Remover
+                </button>
+            </div>
         </li>
     )
 }
